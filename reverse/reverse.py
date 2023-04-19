@@ -1,4 +1,4 @@
-text1="A WI HWD TYOO HDINN SIIDKT"
+text1="SEIPS YRATN ULOVF ODOOH ROBHG IENAY BDEDN UORRU SSINA MYREV E"
 
 # reverse the string
 reversed=text1[::-1]
