@@ -98,11 +98,11 @@ def transposition_decrypt_crack(data, key_limit):
         key -= 1
 
 if __name__ == "__main__":
-    key = 8
-    data = "THVIS OFZHI ESEMI OENTF LBNMO GOEFI IBNWF AAETI LEERN SEEYH AIDDL START ZEY"
+    key = 7
+    data = "This is a simple encryption"
 
-    # transposition_encrypt_key(key, data)
+    transposition_encrypt_key(key, data)
 
-    transposition_decrypt_key(key, data)
+    # transposition_decrypt_key(key, data)
 
-    # transposition_decrypt_crack(data, 8)
+    # transposition_decrypt_crack(data, 10)
