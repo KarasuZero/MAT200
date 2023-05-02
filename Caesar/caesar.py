@@ -58,9 +58,28 @@ def caesar_decrypt_crack(msg):
         caesar_decrypt(key, msg)
         key -= 1
 
+def multiplactive_encrypt(msg, key):
+    # shift the alphabet by the key mod 26
+    shifted_alphabet = alphabet[key % 26:] + alphabet[:key % 26]
+
+    print_info(key, shifted_alphabet)
+
+    # loop through the message and encrypt each letter
+    for letter in msg:
+        # find the index of the letter in the alphabet
+        index = alphabet.find(letter)
+
+        # if the letter is not in the alphabet, add it to the ciphertext
+        if index == -1:
+            print(letter, end='')
+        else:
+            # use the index to find the letter in the shifted alphabet
+            print(shifted_alphabet[index], end='')
+
+    print("\n")
 
 
-data ="JUT'Z YCKGZ ZNK VKZZE ZNOTMY, GTJ JUT'Z VKZ ZNK YCKGZE ZNOTMY"
+data ="YMJ HFJXFW XMNKY UFWY TK YMJ FKKNSJ HNUMJW NS VZJXYNTS KTZW NX F RZQYNUQJ TK YMJ RZQYNUQNHFYNAJ UFWY"
 
 # print("Encryption:\n")
 # caesar_encrypt(10, data)
